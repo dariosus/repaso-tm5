@@ -1,0 +1,22 @@
+header ul {
+  margin-top:25px;
+  overflow: hidden;
+  list-style: none;
+}
+
+header ul li {
+  float: left;
+  margin-right: 15px;
+}
+
+header form.buscar input {
+  float: left;
+}
+
+header form.buscar {
+  overflow: hidden;
+}
+
+input.buscador {
+  width: 40%;
+}
