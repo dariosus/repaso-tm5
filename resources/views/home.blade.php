@@ -15,6 +15,10 @@
                     @endif
 
                     You are logged in!
+
+                    @if (auth()->user()->type == 2)
+                        AH Y SOS ADMIN EH
+                    @endif
                 </div>
             </div>
         </div>
