@@ -1,7 +1,7 @@
 @extends("miPlantilla")
 
 @section("principal")
-    <h2>Mis Películas</h2>
+    <h2>@lang("mensajes.tituloPeliculas")</h2>
     <ul>
       @foreach($peliculas as $pelicula)
         <li>

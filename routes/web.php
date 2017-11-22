@@ -11,6 +11,11 @@
 |
 */
 
+Route::get("/registrarAdmin", "AdminController@add")->middleware("admin");
+Route::post("/registrarAdmin", "AdminController@store")->middleware("admin");
+
+Route::get("/cambiarIdioma", "IdiomaController@cambiar");
+
 Route::get("/actores", "ActorsController@index");
 Route::get("/actores/{id}", "ActorsController@show");
 
@@ -18,8 +23,8 @@ Route::get("/peliculas", "MoviesController@index");
 Route::get("/peliculas/{id}", "MoviesController@show");
 Route::get("/buscarPeliculas", "MoviesController@search");
 
-Route::get("/agregarPelicula", "MoviesController@add");
-Route::post("/agregarPelicula", "MoviesController@store");
+Route::get("/agregarPelicula", "MoviesController@add")->middleware("auth");
+Route::post("/agregarPelicula", "MoviesController@store")->middleware("auth");
 
 Route::post("/borrarPelicula", "MoviesController@delete")->middleware("auth");
 

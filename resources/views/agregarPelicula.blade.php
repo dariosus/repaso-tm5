@@ -67,6 +67,20 @@
         @endforeach
       </select>
     </div>
+    <div class="form-group">
+      <label for="pais">
+        País
+      </label>
+      <select class="form-control" name="pais">
+        @foreach($paises as $pais)
+         
+            <option value="{{$pais->name}}">
+              {{$pais->name}}
+            </option>
+
+        @endforeach
+      </select>
+    </div>
 
     <div class="form-group">
       <input type="submit" class="btn btn-primary" value="Agregar Película">

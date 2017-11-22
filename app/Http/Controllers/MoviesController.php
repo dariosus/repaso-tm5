@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Movie;
 use App\Genre;
+use Curl;
 
 class MoviesController extends Controller
 {
@@ -53,7 +54,11 @@ class MoviesController extends Controller
     public function add() {
       $generos = Genre::all();
 
-      return view("agregarPelicula", compact("generos"));
+      $paises = Curl::to('https://restcountries.eu/rest/v2/all')->asJson()->get();
+
+      //dd($paises);
+
+      return view("agregarPelicula", compact("generos", "paises"));
     }
 
     public function search(Request $r) {

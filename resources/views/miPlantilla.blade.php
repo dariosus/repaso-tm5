@@ -60,13 +60,23 @@
               <input type="submit" name="" value="Buscar" class="btn btn-default">
             </form>
           </li>
+          <li>
+            <form class="buscar" action="/cambiarIdioma" method="GET">
+              <select name="idioma" class="form-control">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+                <option value="it">Italian</option>
+              </select>
+              <input type="submit" name="" value="Cambiar Idioma" class="btn btn-primary">
+            </form>
+          </li>
         </ul>
       </nav>
     </header>
     <div class="container">
       <div class="jumbotron">
         <h1>
-          <marquee>DH Movies</marquee>
+          <marquee>@lang("mensajes.principal")</marquee>
         </h1>
       </div>
       <div class="">
